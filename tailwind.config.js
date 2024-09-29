@@ -6,6 +6,24 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        'spin-logo':'logoswing 20s 20s ease-in-out infinite',
+        'spin-slow': 'spin 3s linear infinite',
+        'flowtext': 'flowtext 12s linear infinite',
+        'fadein': 'fadein 2.5s ease-in',
+      },
+      keyframes: {
+        logoswing : {
+            '0%, 100%': {
+              transform: 'rotate(0) scale(1)',
+              borderRadius: '0'
+            },
+            '50%': {
+                transform: 'rotate(720deg) scale(0.5)',
+                borderRadius: '20px'
+            }
+        }
+      },
       colors: {
         gray: {
           200: "#D5DAE1"

@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url(//hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css);
+
+* {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1rem;
+  display: block;
+  padding: 0.9rem 2rem 0.9rem 3.125rem;
+  margin: 0 0.625rem;
+  border-radius: 40px;
+  position: relative;
+  line-height: 1;
+  color: var(--white200);
+  transition: all 0.3s;
+}
+
+#header__menu {
+  padding: 10px 0;
+}
+#menu {
+  border-bottom: 1px solid var(--black100);
+
+  li {
+    margin-bottom: 5px;
+
+    a {
+      font-size: 1rem;
+      display: block;
+      padding: 0.9rem 2rem 0.9rem 3.125rem;
+      margin: 0 0.625rem;
+      border-radius: 40px;
+      position: relative;
+      line-height: 1;
+      color: #ddd;
+      transition: all 0.3s;
+
+      svg {
+        width: 1.25rem;
+        height: 1.25rem;
+        position: absolute;
+        left: 1.25rem;
+        top: 0.75rem;
+      }
+    }
+    a:hover {
+      background-color: rgb(20, 20, 20);
+      color: white;
+    }
+
+    .active a {
+      background-color: rgb(83, 83, 83);
+      color: white;
+    }
+  }
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.font-special {
+  font-family: "Truculenta", sans-serif;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* @layer utilities {
+.blue-gradient_text {
+    @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
+}
+
+.header {
+    @apply flex justify-between items-center sm:px-16 px-8 py-4 max-w-5xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
+}
+
+}
+
+
+.bg_shape{
+clip-path: polygon(57% 0%, 81% 21%, 100% 62%, 65% 99%, 5% 85%, 18% 30%);
+border-radius: 100%;
+}
+
+.triangle {
+width: 0px;
+height: 0px;
+border-style: solid;
+border-width: 0 90px 70px 90px;
+border-color: transparent transparent #83b6e1 transparent;
+transform: rotate(180deg);
+} */

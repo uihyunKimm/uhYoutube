@@ -7,7 +7,9 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        'spin-logo':'logoswing 20s 20s ease-in-out infinite',
+        'spin-logo':'logoswing 16s 0.1s ease-in-out infinite',
+        'spin-logo2':'logoswing 16s 0.3s ease-in-out infinite',
+        'spin-logo3':'logoswing 16s 0.5s ease-in-out infinite',
         'spin-slow': 'spin 3s linear infinite',
         'flowtext': 'flowtext 12s linear infinite',
         'fadein': 'fadein 2.5s ease-in',

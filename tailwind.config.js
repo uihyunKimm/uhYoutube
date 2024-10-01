@@ -32,6 +32,15 @@ module.exports = {
         gray: {
           200: "#D5DAE1"
         },
+        mainback: {
+          DEFAULT: '#1E1E1E',
+        },
+        primary: {
+          DEFAULT: '#388DF8',
+        },
+        navback: {
+          DEFAULT: '#0f172a',
+        },
         black: {
           DEFAULT: "#000",
           500: "#1D2235"

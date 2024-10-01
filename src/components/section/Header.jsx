@@ -6,7 +6,7 @@ import Sns from '../header/Sns';
 
 const Header = () => {
     return (
-        <header id='header' role='banner' className='fixed left-0 top-0 w-64 h-full z-50 bg-black'>
+        <header id='header' role='banner' className='fixed left-0 top-0 w-64 h-full overflow-y-auto z-50 bg-navback'>
             <Logo />
             <Menu />
             <Sns />

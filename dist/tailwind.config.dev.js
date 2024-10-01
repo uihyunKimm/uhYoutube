@@ -1,10 +1,16 @@
+"use strict";
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./public/index.html", "./src/**/*.{html,js,jsx,tsx}"],
   theme: {
     extend: {
       animation: {
-        'spin-logo': 'logoswing 20s 20s ease-in-out infinite',
+        'spin-logo': 'logoswing 16s 0.1s ease-in-out infinite',
+        'spin-logo2': 'logoswing 16s 0.3s ease-in-out infinite',
+        'spin-logo3': 'logoswing 16s 0.5s ease-in-out infinite',
+        'spin-logo4': 'logoswing 16s 0.7s ease-in-out infinite',
+        'spin-logo5': 'logoswing 16s 0.9s ease-in-out infinite',
         'spin-slow': 'spin 3s linear infinite',
         'flowtext': 'flowtext 12s linear infinite',
         'fadein': 'fadein 2.5s ease-in'
@@ -12,11 +18,11 @@ module.exports = {
       keyframes: {
         logoswing: {
           '0%, 100%': {
-            transform: 'rotate(0) scale(1)',
-            borderRadius: '0'
+            transform: 'rotate(0) scale(0.9)',
+            borderRadius: '8px'
           },
           '50%': {
-            transform: 'rotate(720deg) scale(0.5)',
+            transform: 'rotate(720deg) scale(0.7)',
             borderRadius: '20px'
           }
         }

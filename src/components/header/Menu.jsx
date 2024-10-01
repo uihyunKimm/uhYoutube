@@ -7,7 +7,7 @@ const Menu = () => {
     const location = useLocation();
 
     return (
-        <nav id='header__menu' className='py-2 px-0 '>
+        <nav id='header__menu' className='py-2 px-0'>
             <ul id='menu' className='border-b-[1px] #fff'>
                 {headerMenus.map((menu, key) => (
                     <li key={key} className={location.pathname === menu.src ? 'active' : ''}>
@@ -17,10 +17,10 @@ const Menu = () => {
                     </li>
                 ))}
             </ul>
-            <ul className='keyword'>
+            <ul className='keyword p-5'>
                 {searchKeyword.map((keyword, key) => (
-                    <li key={key}>
-                        <Link to={keyword.src}  className={location.pathname === keyword.src ? 'active flex p-2 m-2' : 'flex p-2 m-2'}>
+                    <li key={key} className='inline-block'>
+                        <Link to={keyword.src}  className={`inline-block py-2 px-4 border-[1px] border-solid border-white/20 text-[0.8rem] rounded-full mx-[1px] my-[3px] transition-all duration-300 hover:bg-white/15  ${location.pathname === keyword.src ? 'active bg-white/10' : ''}`}>
                             {keyword.title}
                         </Link>
                     </li>

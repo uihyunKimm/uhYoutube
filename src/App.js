@@ -2,7 +2,6 @@ import React, {Suspense,lazy} from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/section/Header';
 import Main from './components/section/Main';
-import Footer from './components/section/Footer';
 
 const Home = lazy(()=>import('./pages/Home'));
 const Today  = lazy(()=>import('./pages/Today'));
@@ -20,6 +19,7 @@ const Not  = lazy(()=>import('./pages/Not'));
 const App = () => {
     return (
         <BrowserRouter>
+            <Header />
             <Suspense fallback={<Main/>}>
                 <Routes>
                     <Route path='/' element={<Home />} />

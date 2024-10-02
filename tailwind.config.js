@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'hero-pattern': "url('url(../ img/icon/search.svg)",
+      },
       animation: {
         'spin-logo':'logoswing 16s 0.1s ease-in-out infinite',
         'spin-logo2':'logoswing 16s 0.3s ease-in-out infinite',

@@ -20,7 +20,7 @@ const Menu = () => {
             <ul className='keyword p-5'>
                 {searchKeyword.map((keyword, key) => (
                     <li key={key} className='inline-block'>
-                        <Link to={keyword.src}  className={`inline-block py-2 px-4 border-[1px] border-solid border-white/10 text-[0.8rem] rounded-full mx-[1px] my-[3px] transition-all duration-300 text-white/20 hover:border-primary/50 hover:border-primary/50  ${location.pathname === keyword.src ? 'active border-primary/70 text-primary/70' : ''}`}>
+                        <Link to={keyword.src}  className={`inline-block py-2 px-4 border-[1px] border-solid text-[0.8rem] rounded-full mx-[1px] my-[3px] transition-all duration-300 text-white/20 hover:border-primary/50 hover:border-primary/50  ${location.pathname === keyword.src ? 'active text-primary border-primary/70 text-primary/70' : 'border-white/10'}`}>
                             {keyword.title}
                         </Link>
                     </li>

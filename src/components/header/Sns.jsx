@@ -11,9 +11,9 @@ const Sns = () => {
                             target='_black' 
                             rel='noopener noreferrer' 
                             aria-label={sns.title}
-                            className='inline-block py-2 px-2'
+                            className='inline-block py-2 px-2 hover:bg-white/5 group'
                         >
-                            <span>{sns.icon}</span>
+                            <span className='group-hover:text-primary'>{sns.icon}</span>
                         </a>
                     </li>
                 ))}

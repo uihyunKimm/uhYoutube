@@ -12,6 +12,9 @@ import { AiOutlineCodepen } from "react-icons/ai";
 import { AiFillYoutube } from "react-icons/ai";
 import { AiOutlineInstagram } from "react-icons/ai";
 
+import { RiNotionFill } from "react-icons/ri";
+import { RiBloggerLine } from "react-icons/ri";
+
 export const headerMenus = [
     {
         title: "김의현",
@@ -111,11 +114,11 @@ export const snsLink = [
     {
         title: "Notion",
         url: "https://www.notion.so/UX-UI-79716d060c534ed6abf53370aa95e5d7",
-        icon: <AiFillYoutube />
+        icon: <RiNotionFill />
     },
     {
         title: "Blog",
         url: "https://uihkk.tistory.com/",
-        icon: <AiOutlineCodepen />
+        icon: <RiBloggerLine />
     },
 ]

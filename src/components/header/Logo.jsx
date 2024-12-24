@@ -2,7 +2,7 @@ import React from 'react'
 
 const Logo = () => {
     return (
-        <h1 className='border-b-[0.5px] border-white/10 '>
+        <h1 className='border-b-[0.5px] border-white/10 max-md:fixed max-md:left-0 max-md:top-0 max-md:border-none'>
             <a href="/" className='flex p-2 m-1'>
                 <em className='absolute w-8 h-8 mt-1 block border-solid border-[0.5px] rounded-xl border-gray-400 mr-2 animate-spin-logo aria-hidden'></em>
                 <em className='absolute w-8 h-8 mt-1 block border-solid border-[0.5px] rounded-xl border-gray-500 mr-2 animate-spin-logo2 aria-hidden'></em>

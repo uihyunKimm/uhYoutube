@@ -3,18 +3,18 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/section/Header';
 import Main from './components/section/Main';
 
-const Home = lazy(()=>import('./pages/Home'));
-const Today  = lazy(()=>import('./pages/Today'));
-const Developer  = lazy(()=>import('./pages/Developer'));
-const Webd  = lazy(()=>import('./pages/Webd'));
-const Website  = lazy(()=>import('./pages/Website'));
-const Gsap  = lazy(()=>import('./pages/Gsap'));
-const Port  = lazy(()=>import('./pages/Port'));
-const Youtube  = lazy(()=>import('./pages/Youtube'));
-const Channel  = lazy(()=>import('./pages/Channel'));
-const Video  = lazy(()=>import('./pages/Video'));
-const Search  = lazy(()=>import('./pages/Search'));
-const Not  = lazy(()=>import('./pages/Not'));
+const Home = lazy(()=>import('./components/pages/Home'));
+const Today  = lazy(()=>import('./components/contents/Today'));
+const Developer  = lazy(()=>import('./components/contents/Developer'));
+const Webd  = lazy(()=>import('./components/contents/Webd'));
+const Website  = lazy(()=>import('./components/contents/Website'));
+const Gsap  = lazy(()=>import('./components/contents/Gsap'));
+const Port  = lazy(()=>import('./components/contents/Port'));
+const Youtube  = lazy(()=>import('./components/contents/Youtube'));
+const Channel  = lazy(()=>import('./components/contents/Channel'));
+const Video  = lazy(()=>import('./components/contents/Video'));
+/* const Search  = lazy(()=>import('./components/pages/Search')); */
+const Not  = lazy(()=>import('./components/pages/Not'));
 
 const App = () => {
     return (
@@ -33,7 +33,7 @@ const App = () => {
                     <Route path='/youtube' element={<Youtube />} />
                     <Route path='/channel/:channelId' element={<Channel />} />
                     <Route path='/video/:videoId' element={<Video />} />
-                    <Route path='/search/:searchId' element={<Search />} />
+                    {/* <Route path='/search/:searchId' element={<Search />} /> */}
                     <Route path='*' element={<Not />} />
                 </Routes>
             </Suspense>

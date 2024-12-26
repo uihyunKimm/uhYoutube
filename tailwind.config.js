@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      content :{
+        empty:"''",
+      },
       backgroundImage: {
         'search-icon': "url('https://webs-youtube.netlify.app/static/media/search.7a791d77d93a3a089a1d.svg')",
       },
@@ -18,6 +21,7 @@ module.exports = {
         'spin-slow': 'spin 3s linear infinite',
         'flowtext': 'flowtext 12s linear infinite',
         'fadein': 'fadein 2.5s ease-in',
+        'fadein': 'fadein 2.5s ease-in',
       },
       keyframes: {
         logoswing : {
@@ -29,8 +33,22 @@ module.exports = {
                 transform: 'rotate(720deg) scale(0.7)',
                 borderRadius: '20px'
             }
-        }
-      },
+        },
+        ani : {
+          '0%': {
+              transform: 'rotate(0) scale(1)',
+              borderRadius: '0'
+          },
+          '50%': {
+              transform: 'rotate(720deg) scale(0.5)',
+              borderRadius: '20px'
+          },
+         '100%': {
+              transform: 'rotate(0) scale(1)',
+              borderRadius: '0'
+          }
+      }
+    },
       colors: {
         mainback: {DEFAULT: '#1E1E1E'},
         IDSprimary: {

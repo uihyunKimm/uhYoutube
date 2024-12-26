@@ -3,7 +3,11 @@ import Main from '../section/Main'
 
 const Video = () => {
     return (
-        <div>Video</div>
+        <Main 
+            title = "유튜브 채널"
+            description="유튜브 채널페이지입니다.">
+            Video
+        </Main>
     )
 }
     

@@ -4,13 +4,13 @@ import Header from './components/section/Header';
 import Main from './components/section/Main';
 
 const Home = lazy(()=>import('./components/pages/Home'));
-const Today  = lazy(()=>import('./components/contents/Today'));
-const Developer  = lazy(()=>import('./components/contents/Developer'));
-const Webd  = lazy(()=>import('./components/contents/Webd'));
-const Website  = lazy(()=>import('./components/contents/Website'));
-const Gsap  = lazy(()=>import('./components/contents/Gsap'));
-const Port  = lazy(()=>import('./components/contents/Port'));
-const Youtube  = lazy(()=>import('./components/contents/Youtube'));
+const Today  = lazy(()=>import('./components/pages/Today'));
+const Developer  = lazy(()=>import('./components/pages/Developer'));
+const Webd  = lazy(()=>import('./components/pages/Webd'));
+const Website  = lazy(()=>import('./components/pages/Website'));
+const Gsap  = lazy(()=>import('./components/pages/Gsap'));
+const Port  = lazy(()=>import('./components/pages/Port'));
+const Youtube  = lazy(()=>import('./components/pages/Youtube'));
 const Channel  = lazy(()=>import('./components/contents/Channel'));
 const Video  = lazy(()=>import('./components/contents/Video'));
 /* const Search  = lazy(()=>import('./components/pages/Search')); */

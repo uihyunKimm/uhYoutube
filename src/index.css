@@ -25,6 +25,35 @@
 .play-icon a:hover::after {
   @apply opacity-100;
 }
+
+.swiper-button-prev.swiper-button-disabled, 
+.swiper-button-next.swiper-button-disabled {
+    opacity: 0 !important;
+}
+.swiper-button-next:after, 
+.swiper-button-prev:after {
+    color: #fff !important;
+    font-size: 30px !important;
+}
+.swiper-pagination-bullet {
+    background-color: #fff !important;
+}
+.swiper-button-next {
+    background-color: #00000050;
+    right: 0 !important;
+    top: 40% !important;
+}
+.swiper-button-prev {
+    background-color: #00000050;
+    left: 0 !important;
+    top: 40% !important;
+}
+.video__slider .swiper-button-next {
+  transform: translate(-50%, -16%)!important;
+}
+.video__slider .swiper-button-prev {
+  transform: translate(50%, -16%)!important;
+}
 /* 
 @layer components {
   .play-icon{

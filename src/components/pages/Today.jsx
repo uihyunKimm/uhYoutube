@@ -9,7 +9,7 @@ const Today = () => {
         <Main title="추천 영상" description="오늘의 추천 영상입니다.">
             <section id='todayPage' className='p-10 max-md:mt-16'>
                 <h2>오늘의 추천 영상</h2>
-                {todayText.map((today,key)=>(
+                {todayText && todayText.map((today,key)=>(
                     <div key={key} className='today__inner flex bg-navback-900 mb-[3.125rem] max-lg:flex-col'>
                         <div className='today__thumb play__icon w-2/5 max-2xl:w-[480px] max-xl:w-full'>
                             <Link to={today.page}>

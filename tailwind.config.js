@@ -12,27 +12,16 @@ module.exports = {
       backgroundImage: {
         'search-icon': "url('https://webs-youtube.netlify.app/static/media/search.7a791d77d93a3a089a1d.svg')",
       },
-      animation: {
-        'spin-logo':'logoswing 16s 0.1s ease-in-out infinite',
-        'spin-logo2':'logoswing 16s 0.3s ease-in-out infinite',
-        'spin-logo3':'logoswing 16s 0.5s ease-in-out infinite',
-        'spin-logo4':'logoswing 16s 0.7s ease-in-out infinite',
-        'spin-logo5':'logoswing 16s 0.9s ease-in-out infinite',
-        'spin-slow': 'spin 3s linear infinite',
-        'flowtext': 'flowtext 12s linear infinite',
-        'fadein': 'fadein 2.5s ease-in',
-        'fadein': 'fadein 2.5s ease-in',
-      },
       keyframes: {
         logoswing : {
-            '0%, 100%': {
-              transform: 'rotate(0) scale(0.9)',
-              borderRadius: '8px'
-            },
-            '50%': {
-                transform: 'rotate(720deg) scale(0.7)',
-                borderRadius: '20px'
-            }
+          '0%, 100%': {
+            transform: 'rotate(0) scale(0.9)',
+            borderRadius: '8px'
+          },
+          '50%': {
+              transform: 'rotate(720deg) scale(0.7)',
+              borderRadius: '20px'
+          }
         },
         ani : {
           '0%': {
@@ -47,8 +36,24 @@ module.exports = {
               transform: 'rotate(0) scale(1)',
               borderRadius: '0'
           }
-      }
-    },
+        },
+        bounceDots: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+      },
+      animation: {
+        'spin-logo':'logoswing 16s 0.1s ease-in-out infinite',
+        'spin-logo2':'logoswing 16s 0.3s ease-in-out infinite',
+        'spin-logo3':'logoswing 16s 0.5s ease-in-out infinite',
+        'spin-logo4':'logoswing 16s 0.7s ease-in-out infinite',
+        'spin-logo5':'logoswing 16s 0.9s ease-in-out infinite',
+        'spin-slow': 'spin 3s linear infinite',
+        'flowtext': 'flowtext 12s linear infinite',
+        'fadein': 'fadein 2.5s ease-in',
+        'fadein': 'fadein 2.5s ease-in',
+        'bounceDots': 'bounceDots 0.6s infinite',
+      },
       colors: {
         mainback: {DEFAULT: '#1E1E1E'},
         IDSprimary: {
@@ -150,9 +155,20 @@ module.exports = {
       },
       backgroundImage: {
         /* 'search-icon': "url('../../img/icon/search.svg')", */
+        'custom-radial': 'radial-gradient(50% 50% at 50% 50%, #0048ff 35.75978322072072%, rgba(171, 171, 171, 0) 100%)',
+        'custom-radial-2': "radial-gradient(50% 50% at 50% 50%, #0099ff 0%, rgba(171, 171, 171, 0) 100%)",
       }
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      addUtilities({
+        '.framer-will-change': {
+          '--framer-will-change-override': 'none',
+          'will-change': 'var(--framer-will-change-override, transform)',
+        },
+      });
+    },
+  ],
 }
 

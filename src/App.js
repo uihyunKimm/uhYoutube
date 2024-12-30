@@ -1,7 +1,7 @@
 import React, {Suspense,lazy} from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './components/section/Header';
-import Main from './components/section/Main';
+import Header from './components/contents/section/Header';
+import Main from './components/contents/section/Main';
 
 const Home = lazy(()=>import('./components/pages/Home'));
 const Today  = lazy(()=>import('./components/pages/Today'));
@@ -13,7 +13,7 @@ const Port  = lazy(()=>import('./components/pages/Port'));
 const Youtube  = lazy(()=>import('./components/pages/Youtube'));
 const Channel  = lazy(()=>import('./components/contents/Channel'));
 const Video  = lazy(()=>import('./components/contents/Video'));
-/* const Search  = lazy(()=>import('./components/pages/Search')); */
+const Search  = lazy(()=>import('./components/pages/Search'));
 const Not  = lazy(()=>import('./components/pages/Not'));
 
 const App = () => {
@@ -33,7 +33,7 @@ const App = () => {
                     <Route path='/youtube' element={<Youtube />} />
                     <Route path='/channel/:channelId' element={<Channel />} />
                     <Route path='/video/:videoId' element={<Video />} />
-                    {/* <Route path='/search/:searchId' element={<Search />} /> */}
+                    <Route path='/search/:searchId' element={<Search />} />
                     <Route path='*' element={<Not />} />
                 </Routes>
             </Suspense>

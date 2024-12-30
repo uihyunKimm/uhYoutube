@@ -1,16 +1,26 @@
-import React from 'react'
-import Main from '../section/Main'
+import React,{useState, useEffect} from 'react'
+import Main from '../contents/section/Main'
 
 import { todayText } from '../../data/today'
 import { Link } from 'react-router-dom'
 
 const Today = () => {
+    const [loading, setLoading] = useState(true); 
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 300);
+    }, []);
+
+    const todayClass = loading ? 'isLoading' : 'isLoaded';
+
     return (
         <Main title="추천 영상" description="오늘의 추천 영상입니다.">
-            <section id='todayPage' className='p-10 max-md:mt-16'>
+            <section id='todayPage' className={`${todayClass} p-10 max-md:mt-16`}>
                 <h2>오늘의 추천 영상</h2>
                 {todayText && todayText.map((today,key)=>(
-                    <div key={key} className='today__inner flex bg-navback-900 mb-[3.125rem] max-lg:flex-col'>
+                    <div key={key} className='today__inner rounded-md overflow-hidden flex bg-navback-900 mb-[3.125rem] max-lg:flex-col'>
                         <div className='today__thumb play__icon w-2/5 max-2xl:w-[480px] max-xl:w-full'>
                             <Link to={today.page}>
                                 <img src={today.img} alt={today.title} />

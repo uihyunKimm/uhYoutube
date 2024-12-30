@@ -1,5 +1,5 @@
 import React from 'react'
-import Main from '../section/Main'
+import Main from './section/Main'
 
 const Channel = () => {
     return (

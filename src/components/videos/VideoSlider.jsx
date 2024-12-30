@@ -49,7 +49,7 @@ const VideoSlider = ({videos, title, id}) => {
             >
                 {videos && videos.map((video, key)=>(
                     <SwiperSlide key={key}>
-                        <div className='video mb-5 text-navback-darkfont hover:text-navback-font' key={key}>
+                        <div className='video mb-5 rounded-md overflow-hidden text-navback-darkfont hover:text-navback-font' key={key}>
                             <div className='video__thumb play-icon'>
                                 <Link to={`video/${video.videoId}`} className='mb-2'>
                                 <img src={video.img} alt={video.title}/>

@@ -5,7 +5,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Header from './Header'
 import Search from './Search'
 import Footer from './Footer'
-import MainShadow from '../shadow/MainShadow';
+import MainShadow from '../../shadow/MainShadow';
 
 const Main = (props) => {
     const [loading, setLoading] = useState(true);

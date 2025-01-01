@@ -19,14 +19,14 @@ const Search = () => {
         }, [searchId]);
         
         /*
-         const fetchVideos = (query, pageToken = '') => {
+        const fetchVideos = (query, pageToken = '') => {
             fetchFromAPI(query, pageToken)
                 .then((data) => {
                     if (Array.isArray(data.items)) {
                         setNextPageToken(data.nextPageToken);  // 다음 페이지 토큰 설정
                         setVideos((prevVideos) => [...prevVideos, ...data.items]);  // 비디오 목록 갱신
                     } else {
-                         console.error('Error: data.items is not an array', data);
+                        console.error('Error: data.items is not an array', data);
                         setVideos([]);  // items가 없으면 빈 배열로 처리
                     }
                     setLoading(false);  // 로딩 종료

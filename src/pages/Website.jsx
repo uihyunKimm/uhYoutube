@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react'
-import Main from '../contents/section/Main'
+import Main from '../components/section/Main'
 
-import VideoCard from '../videos/VideoCard'
-import { websiteText } from '../../data/website'
+import VideoCard from '../components/videos/VideoSearch'
+import { websiteText } from '../data/website'
 
 const Website = () => {   
-    const [loading,setLoading] = useState(true);
+        const [loading,setLoading] = useState(true);
 
-    useEffect(() => {
-        setTimeout (()=>{
-            setLoading(false);
-        }, 300);
-    },[]);
+        useEffect(() => {
+            setTimeout (()=>{
+                setLoading(false);
+            }, 300);
+        },[]);
 
-    const websitePageClass = loading ? 'isLoading' : 'isLoaded';
+        const websitePageClass = loading ? 'isLoading' : 'isLoaded';
 
-    return (
+        return (
         <Main title="웺사이트" description="웹사이트 제작.">
             <section id='website' className={websitePageClass}>
                 <h2>웹사이트</h2>

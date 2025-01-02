@@ -1,8 +1,8 @@
 import React,{useState, useEffect} from 'react'
-import Main from '../contents/section/Main'
+import Main from '../components/section/Main'
 
-import { portfolioText } from '../../data/port'
-import VideoCard from '../videos/VideoCard'
+import { portfolioText } from '../data/port'
+import VideoCard from '../components/videos/VideoCard'
 
 const Port = () => {
         const [loading,setLoading] = useState(true);

@@ -5,7 +5,8 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Header from './Header'
 import Search from './Search'
 import Footer from './Footer'
-import MainShadow from '../../shadow/MainShadow';
+import MainShadow from '../shadow/MainShadow';
+import ScrollTo from '../../utils/scrollTo';
 
 const Main = (props) => {
     const [loading, setLoading] = useState(true);
@@ -16,6 +17,7 @@ const Main = (props) => {
         },[]);
     return (
         <HelmetProvider>
+            <ScrollTo/>
             <Helmet
                 titleTemplate='%s | Linkstorage'
                 defaultTitle='uxuihkk | Linkstorage'
@@ -32,7 +34,7 @@ const Main = (props) => {
                     {props.children}
                 </main>)}
                 {loading && (<div className="flex h-svh pl-64 justify-center items-center text-navback-darkfont">
-                                    <div className="animate-spin h-5 w-5 border-2 m-4 border-navback-400 border-t-navback-darkfont rounded-full animate-spin"></div>
+                                    <div className="animate-spin h-5 w-5 border-2 m-4 border-navback-400 border-t-navback-darkfont rounded-full"></div>
                                     Processing...
                                 </div>)}
                 <MainShadow/>

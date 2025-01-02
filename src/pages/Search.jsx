@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react"
 import { useParams } from "react-router-dom"
-import Main from "../contents/section/Main";
+import Main from "../components/section/Main";
 
-import VideoSearch from "../videos/VideoSearch";
-import { fetchFromAPI } from "../../utils/api";
+import VideoSearch from "../components/videos/VideoSearch";
+import { fetchFromAPI } from "../utils/api";
 
 const Search = () => {
     const { searchId } = useParams();
@@ -19,23 +19,20 @@ const Search = () => {
         }, [searchId]);
         
         /*
-         const fetchVideos = (query, pageToken = '') => {
-            fetchFromAPI(query, pageToken)
-                .then((data) => {
-                    if (Array.isArray(data.items)) {
-                        setNextPageToken(data.nextPageToken);  // 다음 페이지 토큰 설정
-                        setVideos((prevVideos) => [...prevVideos, ...data.items]);  // 비디오 목록 갱신
-                    } else {
-                         console.error('Error: data.items is not an array', data);
-                        setVideos([]);  // items가 없으면 빈 배열로 처리
-                    }
-                    setLoading(false);  // 로딩 종료
-                })
-                .catch((error) => {
-                    console.error('Error fetching data:', error);
-                    setLoading(false);  // 에러 발생 시 로딩 종료
-                });
-        }; */
+        const fetchVideos = (query, pageToken = '') => {
+        fetchFromAPI(`search?part=snippet&type=video&q=${query}&pageToken=${pageToken}`)
+            .then((data) => {
+                setNextPageToken(data.nextPageToken);
+                setVideos((prevVideos) => [...prevVideos, ...data.items]);
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.error('Error fetching data:', error);
+                setLoading(false); 
+            });
+        };
+        출처: https://webstoryboy.co.kr/1985 [WEBSTORYBOY:티스토리]
+         */
 
         const fetchVideos = async (query, pageToken = '') => {
             fetch(

@@ -1,16 +1,16 @@
 import React from 'react'
-import Main from '../contents/section/Main.jsx'
-import Today from '../contents/Today.jsx'
-import Developer from '../contents/Developer.jsx'
-import VideoSlider from '../videos/VideoSlider.jsx'
+import Main from '../components/section/Main.jsx'
+import Today from '../components/contents/Today.jsx'
+import Developer from '../components/contents/Developer.jsx'
+import VideoSlider from '../components/videos/VideoSlider.jsx'
 
-import { webdText } from '../../data/webd.js'
-import { websiteText } from '../../data/website.js'
-import { gsapText } from '../../data/gsap.js'
-import { portfolioText } from '../../data/port.js'
-import { youtubeText } from '../../data/youtube.js'
-import { developerText } from '../../data/developer.js'
-import { todayText } from '../../data/today.js'
+import { webdText } from '../data/webd.js'
+import { websiteText } from '../data/website.js'
+import { gsapText } from '../data/gsap.js'
+import { portfolioText } from '../data/port.js'
+import { youtubeText } from '../data/youtube.js'
+import { developerText } from '../data/developer.js'
+import { todayText } from '../data/today.js'
 
 const Home = () => {
     return (

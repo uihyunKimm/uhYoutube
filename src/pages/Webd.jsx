@@ -1,21 +1,21 @@
 import React, {useState, useEffect} from 'react'
-import Main from '../contents/section/Main'
+import Main from '../components/section/Main'
 
-import VideoCard from '../videos/VideoCard'
-import { webdText } from '../../data/webd'
+import VideoCard from '../components/videos/VideoSearch'
+import { webdText } from '../data/webd'
 
 const Webd = () => {
-    const [loading, setLoading] = useState(true);
+        const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        setTimeout(() => {
-            setLoading(false);
-        }, 300);
-    }, []);
-    
-    const webdPageClass = loading ? 'isLoading' : 'isLoaded';
+        useEffect(() => {
+            setTimeout(() => {
+                setLoading(false);
+            }, 300);
+        }, []);
+        
+        const webdPageClass = loading ? 'isLoading' : 'isLoaded';
 
-    return (
+        return (
         <Main title="추천 영상" description="오늘의 추천 영상입니다.">
             <section id='webd' className={webdPageClass}>
                 <h2>웹디자인기능사 </h2>

@@ -1,25 +1,23 @@
 import React, {Suspense,lazy} from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './components/contents/section/Header';
-import Main from './components/contents/section/Main';
+import Main from './components/section/Main';
 
-const Home = lazy(()=>import('./components/pages/Home'));
-const Today  = lazy(()=>import('./components/pages/Today'));
-const Developer  = lazy(()=>import('./components/pages/Developer'));
-const Webd  = lazy(()=>import('./components/pages/Webd'));
-const Website  = lazy(()=>import('./components/pages/Website'));
-const Gsap  = lazy(()=>import('./components/pages/Gsap'));
-const Port  = lazy(()=>import('./components/pages/Port'));
-const Youtube  = lazy(()=>import('./components/pages/Youtube'));
-const Channel  = lazy(()=>import('./components/contents/Channel'));
-const Video  = lazy(()=>import('./components/contents/Video'));
-const Search  = lazy(()=>import('./components/pages/Search'));
-const Not  = lazy(()=>import('./components/pages/Not'));
+const Home = lazy(()=>import('./pages/Home'));
+const Today  = lazy(()=>import('./pages/Today'));
+const Developer  = lazy(()=>import('./pages/Developer'));
+const Webd  = lazy(()=>import('./pages/Webd'));
+const Website  = lazy(()=>import('./pages/Website'));
+const Gsap  = lazy(()=>import('./pages/Gsap'));
+const Port  = lazy(()=>import('./pages/Port'));
+const Youtube  = lazy(()=>import('./pages/Youtube'));
+const Channel  = lazy(()=>import('./pages/Channel'));
+const Video  = lazy(()=>import('./pages/Video'));
+const Search  = lazy(()=>import('./pages/Search'));
+const Not  = lazy(()=>import('./pages/Not'));
 
 const App = () => {
     return (
         <BrowserRouter>
-            <Header />
             <Suspense fallback={<Main/>}>
                 <Routes>
                     <Route path='/' element={<Home />} />

@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react'
-import Main from '../contents/section/Main'
+import Main from '../components/section/Main'
 
-import { todayText } from '../../data/today'
+import { todayText } from '../data/today'
 import { Link } from 'react-router-dom'
 
 const Today = () => {

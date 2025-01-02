@@ -1,11 +1,11 @@
 import React,{useState,useEffect} from 'react'
-import Main from '../contents/section/Main';
+import Main from '../components/section/Main';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { developerText } from '../../data/developer'
+import { developerText } from '../data/developer'
 import { Link } from 'react-router-dom';
 
 const Developer = () => {

@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react"
 import { useParams } from "react-router-dom"
-import Main from "../contents/section/Main";
+import Main from "../components/section/Main";
 
-import VideoSearch from "../videos/VideoSearch";
-import { fetchFromAPI } from "../../utils/api";
+import VideoSearch from "../components/videos/VideoSearch";
+import { fetchFromAPI } from "../utils/api";
 
 const Search = () => {
     const { searchId } = useParams();
@@ -20,6 +20,7 @@ const Search = () => {
         
         /*
         const fetchVideos = (query, pageToken = '') => {
+<<<<<<< HEAD:src/components/pages/Search.jsx
             fetchFromAPI(query, pageToken)
                 .then((data) => {
                     if (Array.isArray(data.items)) {
@@ -36,6 +37,21 @@ const Search = () => {
                     setLoading(false);  // 에러 발생 시 로딩 종료
                 });
         }; */
+=======
+        fetchFromAPI(`search?part=snippet&type=video&q=${query}&pageToken=${pageToken}`)
+            .then((data) => {
+                setNextPageToken(data.nextPageToken);
+                setVideos((prevVideos) => [...prevVideos, ...data.items]);
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.error('Error fetching data:', error);
+                setLoading(false); 
+            });
+        };
+        출처: https://webstoryboy.co.kr/1985 [WEBSTORYBOY:티스토리]
+         */
+>>>>>>> 3a51b637750a801a218dbbce6b457cb433f73413:src/pages/Search.jsx
 
         const fetchVideos = async (query, pageToken = '') => {
             fetch(

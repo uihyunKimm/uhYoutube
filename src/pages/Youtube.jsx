@@ -1,8 +1,8 @@
-import React,{useState, useEffect} from 'react'
-import Main from '../contents/section/Main'
+import React, { useEffect, useState } from 'react'
+import Main from '../components/section/Main'
 
-import { youtubeText } from '../../data/youtube'
-import VideoCard from '../videos/VideoCard'
+import VideoCard from '../components/videos/VideoSearch'
+import { youtubeText } from '../data/youtube'
 
 const Youtube = () => {
         const [loading,setLoading] = useState(true);

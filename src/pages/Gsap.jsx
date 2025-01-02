@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import Main from '../contents/section/Main'
+import Main from '../components/section/Main'
 
-import { gsapText } from '../../data/gsap'
-import VideoCard from '../videos/VideoCard'
+import { gsapText } from '../data/gsap'
+import VideoCard from '../components/videos/VideoCard'
 
 const Gsap = () => {
     const [loading,setLoading] = useState(true);
